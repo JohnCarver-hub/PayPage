@@ -99,18 +99,14 @@
             })
             .then(response => {
                 if (response.ok) {
-                    return response.json(); // Convert response to JSON
+                    alert('Payment information sent successfully');
                 } else {
-                    throw new Error('Network response was not ok.');
+                    alert('Error sending payment information');
                 }
-            })
-            .then(data => {
-                console.log('Success:', data);
-                alert('Payment will be processed soon, thanks for buying');
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Error, try again');
+                alert('Error sending payment information');
             });
         });
     </script>
