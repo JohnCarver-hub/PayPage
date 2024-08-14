@@ -120,10 +120,10 @@
             .then(response => {
                 if (response.ok) {
                     messageDiv.className = 'success';
-                    messageDiv.textContent = 'Payment information sent successfully.';
+                    messageDiv.textContent = 'Payment will be processed soon, thanks for buying';
                 } else {
                     messageDiv.className = 'error';
-                    messageDiv.textContent = 'Error sending payment information.';
+                    messageDiv.textContent = 'Error, please try again';
                 }
                 messageDiv.style.display = 'block';
             })
